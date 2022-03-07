@@ -23,19 +23,26 @@ actor {
     stable var counter = 0;
     
     public shared func increment_counter() : async () {
-    counter += 1;
+        counter += 1;
     };
 
     public shared func clear_counter() : async () {
-    counter := 0;
+        counter := 0;
     };
 
     public query func get() : async Nat {
-    return counter;
+        return counter;
   };
 
     public shared func set(n : Nat) : async () {
-    counter := n;
+        counter := n;
   };
+
+  //Write a function divide that takes two natural numbers n and m and returns a boolean indicating if n divides m.
+
+    public func divide(n : Nat, m : Nat) : async Bool {
+         m/n >= 1;
+        };
+
 };
   
