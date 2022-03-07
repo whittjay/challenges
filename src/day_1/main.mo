@@ -1,3 +1,6 @@
+
+import Debug "mo:base/Debug";
+
 actor {
 
 //Write a function add that takes two natural numbers n and m and returns the sum.
@@ -49,5 +52,17 @@ actor {
     public func is_even(n : Nat) : async Bool {
         n % 2 == 0;
     };
+
+//Write a function sum_of_array that takes an array of natural numbers and returns the sum. This function will returns 0 if the array is empty.
+
+    let array : [Nat] = [1, 2, 3, 4, 5];
+    
+    public func sum_of_array() : async () {
+        var sum : Nat = 0;
+        for (value in array.vals()) {
+            sum := sum + value;
+            Debug.print(debug_show(value));
+        };
+    }
 };
   
