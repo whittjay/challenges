@@ -44,5 +44,10 @@ actor {
          m/n >= 1;
         };
 
+//Write a function is_even that takes a natural number n and returns a boolean indicating if n is even.
+
+    public func is_even(n : Nat) : async Bool {
+        n % 2 == 0;
+    };
 };
   
